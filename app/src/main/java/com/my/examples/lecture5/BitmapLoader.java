@@ -32,21 +32,21 @@ public class BitmapLoader extends AsyncTaskLoader<Bitmap> {
 		if (mScaled) {
 			final String scaledFileName = "" + (mId + 1) + "_scaled.jpg";
 			final String fileName = "" + (mId + 1) + ".jpg";
-			Bitmap bm = ImageStorage.getInstance().loadBitmapFromCacheDir(getContext(), scaledFileName);
-			if (bm == null) {
-				bm = ImageStorage.getInstance().loadBitmapFromAssets(getContext(), fileName);
-				if (bm != null) {
-					bm = UIUtils.scaleBitmap(bm, mW, mH);
-					ImageStorage.getInstance().saveBitmapToFile(getContext(), bm, scaledFileName);
-					return bm;
+			mResult = ImageStorage.getInstance().loadBitmapFromCacheDir(getContext(), scaledFileName);
+			if (mResult == null) {
+				mResult = ImageStorage.getInstance().loadBitmapFromAssets(getContext(), fileName);
+				if (mResult != null) {
+					mResult = UIUtils.scaleBitmap(mResult, mW, mH);
+					ImageStorage.getInstance().saveBitmapToFile(getContext(), mResult, scaledFileName);
+					return mResult;
 				}
 			}
-			return bm;
+			return mResult;
 		}
 		else {
 			final String fileName = "" + (mId + 1) + ".jpg";
-			Bitmap bm = ImageStorage.getInstance().loadBitmapFromAssets(getContext(), fileName);
-			return bm;
+			mResult = ImageStorage.getInstance().loadBitmapFromAssets(getContext(), fileName);
+			return mResult;
 		}
 	}
 

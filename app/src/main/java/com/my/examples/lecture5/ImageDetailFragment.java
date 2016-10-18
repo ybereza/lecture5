@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.my.examples.lecture5.dummy.DummyContent;
@@ -61,7 +62,8 @@ public class ImageDetailFragment extends Fragment {
 
 		// Show the dummy content as text in a TextView.
 		if (mItem != null) {
-			((TextView) rootView.findViewById(R.id.book_detail)).setText(mItem.details);
+			((ImageView) rootView.findViewById(R.id.book_detail)).setImageBitmap(
+					ImageStorage.getInstance().loadBitmapFromAssets(getContext(), mItem.id));
 		}
 
 		return rootView;

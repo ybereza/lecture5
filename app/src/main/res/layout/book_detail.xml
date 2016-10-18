@@ -1,9 +1,7 @@
-<TextView android:id="@+id/book_detail"
-          style="?android:attr/textAppearanceLarge"
+<ImageView android:id="@+id/book_detail"
           xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:padding="16dp"
-          android:textIsSelectable="true"
           tools:context="com.my.examples.lecture5.ImageDetailFragment"/>

@@ -32,7 +32,7 @@ public class UIUtils {
     }
 
     public static Bitmap scaleBitmap(Bitmap input, int width, int height) {
-        Bitmap output = Bitmap.createBitmap((int)width, (int)height, Bitmap.Config.ARGB_8888);
+        Bitmap output = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         float originalWidth = input.getWidth(), originalHeight = input.getHeight();
         Canvas canvas = new Canvas(output);
         float scale = width/originalWidth;

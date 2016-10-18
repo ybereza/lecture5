@@ -15,9 +15,9 @@ import android.view.MenuItem;
  * An activity representing a single Book detail screen. This
  * activity is only used narrow width devices. On tablet-size devices,
  * item details are presented side-by-side with a list of items
- * in a {@link BookListActivity}.
+ * in a {@link ImageListActivity}.
  */
-public class BookDetailActivity extends AppCompatActivity {
+public class ImageDetailActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +54,9 @@ public class BookDetailActivity extends AppCompatActivity {
 			// Create the detail fragment and add it to the activity
 			// using a fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(BookDetailFragment.ARG_ITEM_ID,
-					getIntent().getStringExtra(BookDetailFragment.ARG_ITEM_ID));
-			BookDetailFragment fragment = new BookDetailFragment();
+			arguments.putString(ImageDetailFragment.ARG_ITEM_ID,
+					getIntent().getStringExtra(ImageDetailFragment.ARG_ITEM_ID));
+			ImageDetailFragment fragment = new ImageDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.book_detail_container, fragment)
@@ -75,7 +75,7 @@ public class BookDetailActivity extends AppCompatActivity {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			NavUtils.navigateUpTo(this, new Intent(this, BookListActivity.class));
+			NavUtils.navigateUpTo(this, new Intent(this, ImageListActivity.class));
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

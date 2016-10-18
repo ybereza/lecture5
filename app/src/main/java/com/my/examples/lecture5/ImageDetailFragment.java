@@ -13,11 +13,11 @@ import com.my.examples.lecture5.dummy.DummyContent;
 
 /**
  * A fragment representing a single Book detail screen.
- * This fragment is either contained in a {@link BookListActivity}
- * in two-pane mode (on tablets) or a {@link BookDetailActivity}
+ * This fragment is either contained in a {@link ImageListActivity}
+ * in two-pane mode (on tablets) or a {@link ImageDetailActivity}
  * on handsets.
  */
-public class BookDetailFragment extends Fragment {
+public class ImageDetailFragment extends Fragment {
 	/**
 	 * The fragment argument representing the item ID that this fragment
 	 * represents.
@@ -33,7 +33,7 @@ public class BookDetailFragment extends Fragment {
 	 * Mandatory empty constructor for the fragment manager to instantiate the
 	 * fragment (e.g. upon screen orientation changes).
 	 */
-	public BookDetailFragment() {
+	public ImageDetailFragment() {
 	}
 
 	@Override
